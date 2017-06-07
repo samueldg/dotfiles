@@ -1,0 +1,13 @@
+# MacOS
+.DS_Store
+.Thrashes
+
+# Python virtual environments
+*.env
+*.venv
+
+# Editors
+*.sublime-project
+*.sublime-workspace
+*.sublime-build
+.idea

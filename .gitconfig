@@ -1,0 +1,15 @@
+[user]
+    name = Samuel Dion-Girardeau
+    email = samuel.diongirardeau@gmail.com
+[push]
+    default = simple
+[core]
+    editor = subl -w
+    excludesfile = ~/.gitignore
+[color]
+    ui = true
+[alias]
+    fixup = commit --amend --no-edit
+    poulpe = pull --all --tags --prune
+    done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git poulpe && git branch -d $_CURRENT_BRANCH"
+    aliases = config --get-regexp alias
