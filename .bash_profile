@@ -9,4 +9,4 @@ unset file;
 
 shopt -s histappend;
 
-cd workspace/
+[ -r "workspace" ] && cd workspace/
