@@ -3,10 +3,11 @@ mkcd () {
 }
 
 sublp () {
-    PROJECT=$(find "$@" -maxdepth 1 -type f -name '*.sublime-project')
+    SUBL_PATH="${@:-.}"
+    PROJECT=$(find "$SUBL_PATH" -maxdepth 1 -type f -name '*.sublime-project')
     if [ -n "$PROJECT" ]; then
         subl $PROJECT
     else
-        subl "$@"
+        subl "$SUBL_PATH"
     fi
 }
