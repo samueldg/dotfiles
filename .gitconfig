@@ -13,3 +13,5 @@
     poulpe = pull --all --tags --prune
     done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git poulpe && git branch -d $_CURRENT_BRANCH"
     aliases = config --get-regexp alias
+[pull]
+    rebase = true
