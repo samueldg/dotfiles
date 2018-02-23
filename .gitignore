@@ -3,7 +3,6 @@
 .Thrashes
 
 # Python virtual environments
-*.env
 *.venv
 
 # Editors
