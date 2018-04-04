@@ -1,0 +1,11 @@
+{
+ "foreign_shells": [
+  {
+   "aliascmd": "alias",
+   "envcmd": "env",
+   "login": true,
+   "shell": "bash"
+  }
+ ]
+}
+
