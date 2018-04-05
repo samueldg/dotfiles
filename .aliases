@@ -13,7 +13,7 @@ alias gk='gitk --all& '
 alias gx='gitx --all '
 alias gfa='git fetch --all '
 alias gp='git push '
-alias gpu='git push -u origin $(git rev-parse --abbrev-ref HEAD) '
+alias gpu='git pushup '
 
 alias doco='docker-compose '
 alias dpsa='docker ps -a'
