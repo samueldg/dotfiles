@@ -15,6 +15,7 @@
     aliases = config --get-regexp alias
     git = !exec git
     pushup= "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git push -u origin $_CURRENT_BRANCH"
+    lease= push --force-with-lease
 [pull]
     rebase = true
 [filter "lfs"]
