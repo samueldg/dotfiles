@@ -1,5 +1,7 @@
 import random
 
+xontrib load vox
+
 # Customize multiline prompt appearance
 $MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
 
