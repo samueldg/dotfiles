@@ -2,6 +2,8 @@ import random
 
 xontrib load vox
 
+source-bash ~/.bash_profile
+
 # Customize multiline prompt appearance
 $MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
 
