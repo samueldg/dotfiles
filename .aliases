@@ -19,3 +19,4 @@ alias dpsa='docker ps -a'
 alias k='kubectl'
 
 alias venv='source *.venv/bin/activate'
+alias nb='jupyter notebook'
