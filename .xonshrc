@@ -27,8 +27,10 @@ $PROMPT = (
     '{NO_COLOR} '
 )
 
+
 def _fuck(args, stdin=None):
     sudo @$(history show -1)
+
 
 aliases['fuck'] = _fuck
 
