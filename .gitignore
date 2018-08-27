@@ -4,6 +4,7 @@
 
 # Python virtual environments
 *.venv
+.python-version
 
 # Editors
 *.sublime-project
