@@ -31,6 +31,9 @@ $PROMPT = (
     '{NO_COLOR} '
 )
 
+# Custom prompt_toolkit style definitions
+$PTK_STYLE_OVERRIDES['completion-menu'] = 'bg:#333333 #EEEEEE'
+
 
 def _fuck(args, stdin=None):
     sudo @$(history show -1)
