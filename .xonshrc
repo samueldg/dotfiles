@@ -34,6 +34,9 @@ $PROMPT = (
 # Custom prompt_toolkit style definitions
 $PTK_STYLE_OVERRIDES['completion-menu'] = 'bg:#333333 #EEEEEE'
 
+# Add Homebrew bash completions path
+$BASH_COMPLETIONS.insert(0, '/usr/local/etc/bash_completion.d')
+
 
 def _fuck(args, stdin=None):
     sudo @$(history show -1)
