@@ -5,3 +5,5 @@ export EDITOR='vim'
 
 export HISTCONTROL=ignoreboth
 export HISTIGNORE='# *'
+
+export HOMEBREW_INSTALL_CLEANUP=1
