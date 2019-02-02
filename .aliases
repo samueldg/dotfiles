@@ -16,7 +16,7 @@ alias gfa='git fetch --all '
 alias gp='git push '
 alias gpu='git pushup '
 
-alias doco='docker-compose '
+alias dc='docker-compose '
 alias dpsa='docker ps -a'
 alias k='kubectl'
 
