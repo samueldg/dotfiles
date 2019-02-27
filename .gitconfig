@@ -1,28 +1,28 @@
 [user]
-    name = Samuel Dion-Girardeau
-    email = samuel.diongirardeau@gmail.com
-    signingkey = 5EE73F061FE9F625
+	name = Samuel Dion-Girardeau
+	email = samuel.diongirardeau@gmail.com
+	signingkey = 5EE73F061FE9F625
 [push]
-    default = simple
+	default = simple
 [core]
-    editor = subl -w
-    excludesfile = ~/.gitignore
+	editor = subl -w
+	excludesfile = ~/.gitignore
 [color]
-    ui = true
+	ui = true
 [alias]
-    fixup = commit --amend --no-edit
-    poulpe = pull --all --tags --prune
-    done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git poulpe && git branch -d $_CURRENT_BRANCH"
-    aliases = config --get-regexp alias
-    git = !exec git
-    pushup= "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git push -u origin $_CURRENT_BRANCH"
-    lease= push --force-with-lease
+	fixup = commit --amend --no-edit
+	poulpe = pull --all --tags --prune
+	done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git poulpe && git branch -d $_CURRENT_BRANCH"
+	aliases = config --get-regexp alias
+	git = !exec git
+	pushup= "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git push -u origin $_CURRENT_BRANCH"
+	lease= push --force-with-lease
 [pull]
-    rebase = true
+	rebase = true
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [commit]
-    gpgsign = true
+	gpgsign = true
