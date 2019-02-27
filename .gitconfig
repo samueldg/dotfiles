@@ -1,6 +1,7 @@
 [user]
     name = Samuel Dion-Girardeau
     email = samuel.diongirardeau@gmail.com
+    signingkey = 5EE73F061FE9F625
 [push]
     default = simple
 [core]
