@@ -7,3 +7,5 @@ export HISTCONTROL=ignoreboth
 export HISTIGNORE='# *'
 
 export HOMEBREW_INSTALL_CLEANUP=1
+
+export GPG_TTY="tty"
