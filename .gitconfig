@@ -10,6 +10,7 @@
 [color]
 	ui = true
 [alias]
+	amend = commit --amend
 	fixup = commit --amend --no-edit
 	poulpe = pull --all --tags --prune
 	done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git poulpe && git branch -d $_CURRENT_BRANCH"
