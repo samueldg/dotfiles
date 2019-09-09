@@ -11,3 +11,4 @@
 *.sublime-workspace
 *.sublime-build
 .idea
+*.Rproj
