@@ -1,1 +1,1 @@
-export PATH="/usr/local/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.fastlane/bin:$PATH"
+export PATH="/usr/local/bin:/usr/local/sbin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/.fastlane/bin:$PATH"
