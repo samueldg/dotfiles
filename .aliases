@@ -15,6 +15,7 @@ alias gl='git log '
 alias gp='git push '
 alias gpu='git pushup '
 alias gs='git status '
+alias gw='git switch '
 
 alias dc='docker-compose '
 alias dpsa='docker ps -a'
