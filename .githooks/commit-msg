@@ -10,8 +10,9 @@ with open(sys.argv[1]) as commit_message_file:
     commit_title = commit_message_file.readline().strip()
 
 
-if len(commit_title) > MAX_TITLE_LENGTH:
-    print(f"Commit message too long: should be {MAX_TITLE_LENGTH} characters or less")
+title_length = len(commit_title)
+if title_length > MAX_TITLE_LENGTH:
+    print(f"Commit message too long: {title_length}/{MAX_TITLE_LENGTH} characters")
     sys.exit(1)
 
 sys.exit(0)
