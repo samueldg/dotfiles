@@ -6,7 +6,7 @@ MAX_TITLE_LENGTH = 50
 
 commit_message_filename = sys.argv[1]
 
-with open(sys.argv[1]) as commit_message_file:
+with open(commit_message_filename) as commit_message_file:
     commit_title = commit_message_file.readline().strip()
 
 
