@@ -1,6 +1,7 @@
 import random
 
 xontrib load vox
+xontrib load pyenv
 
 source-bash ~/.bash_profile
 
