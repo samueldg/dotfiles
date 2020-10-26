@@ -7,6 +7,7 @@
 [core]
 	editor = subl -w
 	excludesfile = ~/.gitignore
+    pager = delta
 [color]
 	ui = true
 [alias]
@@ -29,3 +30,17 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[interactive]
+    diffFilter = delta --color-only
+[diff]
+    colorMoved = default
+[delta]
+    features = line-numbers decorations
+    whitespace-error-style = 22 reverse
+    syntax-theme = Monokai Extended
+[delta "decorations"]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none
