@@ -14,7 +14,7 @@
 	amend = commit --amend
 	fixup = commit --amend --no-edit
 	poulpe = pull --all --tags --prune
-	done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git checkout master && git poulpe && git branch -d $_CURRENT_BRANCH"
+	done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git switch master && git poulpe && git branch -d $_CURRENT_BRANCH"
 	aliases = config --get-regexp alias
 	git = !exec git
 	pushup= "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git push -u origin $_CURRENT_BRANCH"
