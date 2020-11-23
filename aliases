@@ -24,3 +24,5 @@ alias k='kubectl'
 
 alias venv='source *.venv/bin/activate'
 alias nb='jupyter notebook'
+
+alias got='say -v Samantha "Shame! Shame! Shame!"'
