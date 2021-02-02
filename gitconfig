@@ -19,6 +19,7 @@
 	git = !exec git
 	pushup= "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git push -u origin $_CURRENT_BRANCH"
 	lease= push --force-with-lease
+	summary= log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
 [pull]
 	rebase = true
 [commit]
