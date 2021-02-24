@@ -22,6 +22,8 @@
 	summary= log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
 [pull]
 	rebase = true
+[rebase]
+	autoStash = true
 [commit]
 	gpgsign = true
 [gpg]
