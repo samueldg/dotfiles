@@ -2,6 +2,8 @@
 	name = Samuel Dion-Girardeau
 	email = samuel.diongirardeau@gmail.com
 	signingkey = 5EE73F061FE9F625
+[init]
+	defaultBranch = master
 [push]
 	default = simple
 [core]
