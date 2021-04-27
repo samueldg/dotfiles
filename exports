@@ -9,3 +9,5 @@ export HISTIGNORE='# *'
 export HOMEBREW_INSTALL_CLEANUP=1
 
 export GPG_TTY="tty"
+
+export DOCKER_SCAN_SUGGEST="false"
