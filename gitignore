@@ -12,3 +12,4 @@
 *.sublime-build
 .idea
 *.Rproj
+*.vscode
