@@ -7,7 +7,7 @@
 [push]
 	default = simple
 [core]
-	editor = subl -w
+	editor = code -w
 	excludesfile = ~/.gitignore
 	pager = delta
 [color]
