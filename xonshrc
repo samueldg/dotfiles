@@ -1,9 +1,9 @@
 import random
 
+source-bash ~/.bash_profile
+
 xontrib load vox
 xontrib load pyenv
-
-source-bash ~/.bash_profile
 
 # Disable alias warning:
 #    Skipping application of 'foo' alias from 'bash' [...]
