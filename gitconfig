@@ -53,3 +53,5 @@
 	file-decoration-style = none
 [github]
 	user = samueldg
+[advice]
+	addEmptyPathspec = false
