@@ -55,4 +55,4 @@ def _fuck(args, stdin=None):
 
 aliases['fuck'] = _fuck
 
-cd ~/workspace
+# cd ~/workspace
