@@ -55,5 +55,5 @@ def _fuck(args, stdin=None):
 
 aliases['fuck'] = _fuck
 
-if $XONSH_INTERACTIVE:
+if $XONSH_INTERACTIVE and $XONSH_LOGIN:
     cd ~/workspace
