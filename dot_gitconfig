@@ -1,0 +1,57 @@
+[user]
+	name = Samuel Dion-Girardeau
+	email = samuel.diongirardeau@gmail.com
+	signingkey = 5EE73F061FE9F625
+[init]
+	defaultBranch = master
+[push]
+	default = simple
+[core]
+	editor = code -w
+	excludesfile = ~/.gitignore
+	pager = delta
+[color]
+	ui = true
+[alias]
+	amend = commit --amend
+	fixup = commit --amend --no-edit
+	poulpe = pull --all --tags --prune
+	done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git switch master && git poulpe && git branch -d $_CURRENT_BRANCH"
+	aliases = config --get-regexp alias
+	git = !exec git
+	pushup= "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git push -u origin $_CURRENT_BRANCH"
+	lease= push --force-with-lease
+	summary= log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[interactive]
+	diffFilter = delta --color-only
+[diff]
+	colorMoved = default
+[delta]
+	features = line-numbers decorations
+	whitespace-error-style = 22 reverse
+	syntax-theme = Monokai Extended
+[delta "decorations"]
+	plus-color = "#012800"
+	minus-color = "#340001"
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+[github]
+	user = samueldg
+[advice]
+	addEmptyPathspec = false
