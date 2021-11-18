@@ -7,5 +7,5 @@ index-servers=
 username = samueldg
 
 [testpypi]
-repository: https://test.pypi.org/legacy/
+repository = https://test.pypi.org/legacy/
 username = samueldg
