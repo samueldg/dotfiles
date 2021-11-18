@@ -1,0 +1,2 @@
+config linguist-language=Git-Config
+ignore linguist-language=Ignore-List
