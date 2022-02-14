@@ -46,8 +46,8 @@
 	whitespace-error-style = 22 reverse
 	syntax-theme = Monokai Extended
 [delta "decorations"]
-	plus-color = "#012800"
-	minus-color = "#340001"
+	plus-style = "syntax #012800"
+	minus-style = "normal #340001"
 	commit-decoration-style = bold yellow box ul
 	file-style = bold yellow ul
 	file-decoration-style = none
