@@ -27,7 +27,7 @@
 [rebase]
 	autoStash = true
 [blame]
-	ignoreRevsFile = .git-blame-ignore-revs
+	# ignoreRevsFile = .git-blame-ignore-revs
 [commit]
 	gpgsign = true
 [gpg]
