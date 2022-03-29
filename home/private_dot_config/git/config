@@ -14,12 +14,13 @@
 	ui = true
 [alias]
 	amend = commit --amend
+	current-branch = git rev-parse --abbrev-ref HEAD
 	fixup = commit --amend --no-edit
 	poulpe = pull --all --tags --prune
-	done = "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git switch master && git poulpe && git branch -d $_CURRENT_BRANCH"
+	done = "!_CURRENT_BRANCH=$(git current-branch) && git switch master && git poulpe && git branch -d $_CURRENT_BRANCH"
 	aliases = config --get-regexp alias
 	git = !exec git
-	pushup= "!_CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD) && git push -u origin $_CURRENT_BRANCH"
+	pushup= "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
 	lease= push --force-with-lease
 	summary= log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
 [pull]
