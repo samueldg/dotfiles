@@ -13,16 +13,16 @@
 [color]
 	ui = true
 [alias]
+	aliases = config --get-regexp alias
 	amend = commit --amend
 	current-branch = git rev-parse --abbrev-ref HEAD
 	default-branch = "!git ls-remote --exit-code --heads origin main >/dev/null && echo main || echo master"
-	fixup = commit --amend --no-edit
-	poulpe = pull --all --tags --prune
 	done = "!_CURRENT_BRANCH=$(git current-branch) _DEFAULT_BRANCH=$(git default-branch) && git switch $_DEFAULT_BRANCH && git poulpe && git branch -d $_CURRENT_BRANCH"
-	aliases = config --get-regexp alias
+	fixup = commit --amend --no-edit
 	git = !exec git
-	pushup= "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
 	lease= push --force-with-lease
+	poulpe = pull --all --tags --prune
+	pushup= "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
 	summary= log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
 [pull]
 	rebase = true
