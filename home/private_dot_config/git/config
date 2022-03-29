@@ -15,9 +15,10 @@
 [alias]
 	amend = commit --amend
 	current-branch = git rev-parse --abbrev-ref HEAD
+	default-branch = "!git ls-remote --exit-code --heads origin main >/dev/null && echo main || echo master"
 	fixup = commit --amend --no-edit
 	poulpe = pull --all --tags --prune
-	done = "!_CURRENT_BRANCH=$(git current-branch) && git switch master && git poulpe && git branch -d $_CURRENT_BRANCH"
+	done = "!_CURRENT_BRANCH=$(git current-branch) _DEFAULT_BRANCH=$(git default-branch) && git switch $_DEFAULT_BRANCH && git poulpe && git branch -d $_CURRENT_BRANCH"
 	aliases = config --get-regexp alias
 	git = !exec git
 	pushup= "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
