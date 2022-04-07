@@ -20,10 +20,10 @@
 	done = "!_CURRENT_BRANCH=$(git current-branch) _DEFAULT_BRANCH=$(git default-branch) && git switch $_DEFAULT_BRANCH && git poulpe && git branch -d $_CURRENT_BRANCH"
 	fixup = commit --amend --no-edit
 	git = !exec git
-	lease= push --force-with-lease
+	lease = push --force-with-lease
 	poulpe = pull --all --tags --prune
-	pushup= "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
-	summary= log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
+	pushup = "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
+	summary = log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
 [pull]
 	rebase = true
 [rebase]
