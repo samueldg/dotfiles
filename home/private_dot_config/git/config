@@ -21,6 +21,7 @@
 	fixup = commit --amend --no-edit
 	git = !exec git
 	lease = push --force-with-lease
+	master2main = "!git branch -m master main && git fetch origin && git branch -u origin/main main && git remote set-head origin -a"
 	poulpe = pull --all --tags --prune
 	pushup = "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
 	summary = log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
