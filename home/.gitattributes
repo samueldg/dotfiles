@@ -1,5 +1,5 @@
 .chezmoiignore linguist-language=Ignore-List
-dot_aliases linguist-language=Shell
+dot_aliases.tmpl linguist-language=Shell
 dot_bash_profile linguist-language=Shell
 dot_bashrc linguist-language=Shell
 dot_exports linguist-language=Shell
