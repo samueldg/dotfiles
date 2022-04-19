@@ -6,5 +6,4 @@ dot_exports linguist-language=Shell
 dot_functions linguist-language=Shell
 dot_inputrc linguist-language=Readline-Config
 dot_path linguist-language=Shell
-dot_pgclirc linguist-language=INI
 private_dot_pypirc linguist-language=INI
