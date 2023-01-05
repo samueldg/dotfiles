@@ -1,4 +1,14 @@
 import random
+import warnings
+
+
+# Temporary fix for https://github.com/xonsh/xonsh/issues/4409
+warnings.filterwarnings(
+    'ignore',
+    message='There is no current event loop',
+    category=DeprecationWarning,
+    module='prompt_toolkit',
+)
 
 source-bash ~/.bash_profile
 
