@@ -13,7 +13,6 @@ warnings.filterwarnings(
 source-bash ~/.bash_profile
 
 xontrib load vox
-xontrib load pyenv
 
 # Disable alias warning:
 #    Skipping application of 'foo' alias from 'bash' [...]
