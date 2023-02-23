@@ -60,3 +60,8 @@ def _fuck(args, stdin=None):
 
 
 aliases['fuck'] = _fuck
+
+
+if $(command -v oh-my-posh):
+    $OH_MY_POSH_HOME = $(brew --prefix oh-my-posh).strip()
+    execx($(oh-my-posh init xonsh --config "$OH_MY_POSH_HOME/themes/slimfat.omp.json"))
