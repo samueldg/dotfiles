@@ -23,9 +23,6 @@ $MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
 # Custom prompt_toolkit style definitions
 $XONSH_STYLE_OVERRIDES['completion-menu'] = 'bg:#333333 #EEEEEE'
 
-# Don't lazy load prompt-toolkit's color-input support.
-$ENABLE_ASYNC_PROMPT = False
-
 # Add Homebrew bash completions path
 $BASH_COMPLETIONS.insert(0, '/usr/local/etc/bash_completion.d')
 
