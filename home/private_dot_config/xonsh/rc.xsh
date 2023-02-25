@@ -1,4 +1,3 @@
-import random
 import warnings
 
 
@@ -20,26 +19,6 @@ $FOREIGN_ALIASES_SUPPRESS_SKIP_MESSAGE = True
 
 # Customize multiline prompt appearance
 $MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
-
-PROMPT_CHARACTERS = [
-    '♔ ',
-    '♕ ',
-    '♙ ',
-    '፨ ',
-    '∆',
-    '∞',
-    'ツ',
-]
-
-$PROMPT_FIELDS['prompt_cursor'] = random.choice(PROMPT_CHARACTERS)
-
-$PROMPT = (
-    '{env_name:{} }' +
-    '{BOLD_GREEN}{user}@{hostname}' +
-    '{BOLD_BLUE} {cwd}{branch_color}{curr_branch: {}}' +
-    '{RESET} {BOLD_BLUE}{prompt_cursor}' +
-    '{RESET} '
-)
 
 # Custom prompt_toolkit style definitions
 $XONSH_STYLE_OVERRIDES['completion-menu'] = 'bg:#333333 #EEEEEE'
