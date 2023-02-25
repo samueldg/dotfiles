@@ -59,7 +59,19 @@ def _fuck(args, stdin=None):
     sudo @$(history show -1)
 
 
+def _upall(args, stdin=None):
+    if $(command -v chezmoi):
+        chezmoi update
+    if $(command -v brew):
+        brew update && brew upgrade
+    if $(command -v gcloud):
+        gcloud components update --quiet
+    if $(command -v pipx):
+        pipx upgrade-all
+
+
 aliases['fuck'] = _fuck
+aliases['upall'] = _upall
 
 
 if $(command -v oh-my-posh):
