@@ -5,7 +5,6 @@ set -euo pipefail
 brew_formulae="\
     asciinema \
     bat \
-    black \
     chezmoi \
     curl \
     git \
@@ -26,7 +25,6 @@ brew_formulae="\
     tldr \
     tree \
     wget \
-    xonsh \
 "
 
 brew_casks="\
@@ -37,6 +35,7 @@ brew_casks="\
 "
 
 pipx_packages="\
+    black \
     cookiecutter \
     flake8 \
     poetry \
@@ -44,6 +43,7 @@ pipx_packages="\
     rich-cli \
     ruff \
     snakeviz \
+    xonsh \
 "
 
 brew install $brew_formulae
