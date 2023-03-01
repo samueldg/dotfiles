@@ -37,8 +37,13 @@ brew_casks="\
 "
 
 pipx_packages="\
+    cookiecutter \
     flake8 \
     poetry \
+    python-lsp-server \
+    rich-cli \
+    ruff \
+    snakeviz \
 "
 
 brew install $brew_formulae
