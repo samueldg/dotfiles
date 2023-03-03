@@ -38,6 +38,7 @@ pipx_packages="\
     black \
     cookiecutter \
     flake8 \
+    hatchling \
     poetry \
     python-lsp-server \
     rich-cli \
