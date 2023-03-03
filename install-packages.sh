@@ -3,7 +3,6 @@
 set -euo pipefail
 
 brew_formulae="\
-    asciinema \
     bat \
     chezmoi \
     curl \
@@ -35,6 +34,7 @@ brew_casks="\
 "
 
 pipx_packages="\
+    asciinema \
     black \
     cookiecutter \
     flake8 \
