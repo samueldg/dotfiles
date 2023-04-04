@@ -38,8 +38,15 @@ def _upall(args, stdin=None):
         pipx upgrade-all
 
 
+def _openbb(args, stdin=None):
+    # Can't call it directly because of the space in the path:
+    # https://github.com/xonsh/xonsh/issues/4481
+    $["/Applications/OpenBB Terminal/OpenBB Terminal"]
+
+
 aliases['fuck'] = _fuck
 aliases['upall'] = _upall
+aliases['openbb'] = _openbb
 
 
 if $(command -v oh-my-posh):
