@@ -44,9 +44,14 @@ def _openbb(args, stdin=None):
     $["/Applications/OpenBB Terminal/OpenBB Terminal"]
 
 
+def _cw(args, stdin=None):
+    code g`*.code-workspace`
+
+
 aliases['fuck'] = _fuck
 aliases['upall'] = _upall
 aliases['openbb'] = _openbb
+aliases['cw'] = _cw
 
 
 if $(command -v oh-my-posh):
