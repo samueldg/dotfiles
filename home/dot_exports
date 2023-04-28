@@ -15,3 +15,5 @@ export GPG_TTY="tty"
 export DOCKER_SCAN_SUGGEST="false"
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+export RIPGREP_CONFIG_PATH="~/.config/ripgrep/config.rc"
