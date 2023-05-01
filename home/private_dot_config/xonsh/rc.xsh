@@ -45,7 +45,13 @@ def _openbb(args, stdin=None):
 
 
 def _cw(args, stdin=None):
-    code g`*.code-workspace`
+    directory = args[0] if args else "."
+
+    if gf`{directory}/*.code-workspace`:
+        code @(gf`{directory}/*.code-workspace`[0])
+    else:
+        code @(directory)
+    
 
 
 aliases['fuck'] = _fuck
