@@ -29,12 +29,16 @@ def _fuck(args, stdin=None):
 
 def _upall(args, stdin=None):
     if $(command -v chezmoi):
+        echo "Updating chezmoi"
         chezmoi update
     if $(command -v brew):
+        echo "Updating brew"
         brew update && brew upgrade
     if $(command -v gcloud):
+        echo "Updating gcloud"
         gcloud components update --quiet
     if $(command -v pipx):
+        echo "Updating pipx"
         pipx upgrade-all
 
 
