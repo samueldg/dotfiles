@@ -13,6 +13,7 @@ brew_formulae="\
     gnupg \
     kubernetes-cli \
     kustomize \
+    oh-my-posh \
     pgcli \
     pinentry-mac \
     pipx \
