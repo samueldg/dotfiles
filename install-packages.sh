@@ -40,11 +40,11 @@ pipx_packages="\
     flake8 \
     hatchling \
     poetry \
-    python-lsp-server \
+    python-lsp-server[all] \
     rich-cli \
     ruff \
     snakeviz \
-    xonsh \
+    xonsh[full] \
 "
 
 brew install $brew_formulae
