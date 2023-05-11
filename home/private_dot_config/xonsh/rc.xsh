@@ -32,13 +32,13 @@ def _upall(args, stdin=None):
         echo "Updating chezmoi"
         chezmoi update
     if $(command -v brew):
-        echo "Updating brew"
+        echo "\nUpdating brew"
         brew update && brew upgrade
     if $(command -v gcloud):
-        echo "Updating gcloud"
+        echo "\nUpdating gcloud"
         gcloud components update --quiet
     if $(command -v pipx):
-        echo "Updating pipx"
+        echo "\nUpdating pipx"
         pipx upgrade-all
 
 
