@@ -33,7 +33,8 @@ def _upall(args, stdin=None):
         chezmoi update
     if $(command -v brew):
         rich -p "Updating brew" --panel 'rounded' --panel-style 'green'
-        brew update && brew upgrade
+        brew update
+        brew upgrade
     if $(command -v gcloud):
         rich -p "Updating gcloud" --panel 'rounded' --panel-style 'green'
         gcloud components update --quiet
