@@ -18,7 +18,6 @@ brew_formulae="\
     pgcli \
     pinentry-mac \
     pipx \
-    pre-commit \
     pyenv \
     pyenv-virtualenv \
     python-yq \
@@ -42,6 +41,7 @@ pipx_packages="\
     flake8 \
     hatchling \
     poetry \
+    pre-commit \
     python-lsp-server[all] \
     rich-cli \
     ruff \
