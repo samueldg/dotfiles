@@ -38,7 +38,6 @@ pipx_packages="\
     asciinema \
     black \
     cookiecutter \
-    flake8 \
     hatchling \
     poetry \
     pre-commit \
