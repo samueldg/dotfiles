@@ -53,3 +53,6 @@ pipx_packages="\
 brew install $brew_formulae
 brew install --cask $brew_casks
 pipx install $pipx_packages
+
+mkdir -p ~/.docker/cli-plugins
+ln -sfn /opt/homebrew/bin/docker-compose ~/.docker/cli-plugins/docker-compose
