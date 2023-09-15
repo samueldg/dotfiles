@@ -6,6 +6,8 @@ brew_formulae="\
     bat \
     chezmoi \
     curl \
+    docker \
+    docker-compose \
     git \
     git-delta \
     git-lfs \
