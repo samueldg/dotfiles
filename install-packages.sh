@@ -8,6 +8,7 @@ brew_formulae="\
     curl \
     docker \
     docker-compose \
+    gh \
     git \
     git-delta \
     git-lfs \
