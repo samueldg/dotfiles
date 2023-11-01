@@ -18,7 +18,6 @@ brew_formulae="\
     kubernetes-cli \
     kustomize \
     oh-my-posh \
-    pgcli \
     pinentry-mac \
     pipx \
     pyenv \
@@ -42,6 +41,7 @@ pipx_packages="\
     black \
     cookiecutter \
     hatchling \
+    pgcli \
     poetry \
     pre-commit \
     python-lsp-server[all] \
