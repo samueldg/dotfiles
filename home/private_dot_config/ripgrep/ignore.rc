@@ -1,3 +1,6 @@
 # Hidden directories to stop ignoring
 !*/.buildkite
 !*/.github
+
+# Always ignore excalidraw files
+*.excalidraw
