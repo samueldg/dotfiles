@@ -13,6 +13,7 @@
 [color]
 	ui = true
 [alias]
+	alias-master-as-main = "!git symbolic-ref refs/heads/main refs/heads/master && git symbolic-ref refs/remotes/origin/main refs/remotes/origin/master"
 	aliases = config --get-regexp alias
 	amend = commit --amend
 	current-branch = git rev-parse --abbrev-ref HEAD
