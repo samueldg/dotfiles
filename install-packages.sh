@@ -7,6 +7,7 @@ brew_formulae="\
     chezmoi \
     curl \
     docker \
+    docker-buildx \
     docker-compose \
     gh \
     git \
@@ -57,3 +58,4 @@ pipx install $pipx_packages
 
 mkdir -p ~/.docker/cli-plugins
 ln -sfn /opt/homebrew/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+ln -sfn /opt/homebrew/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
