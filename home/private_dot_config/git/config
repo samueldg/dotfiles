@@ -5,6 +5,7 @@
 [init]
 	defaultBranch = main
 [push]
+	autosetupremote = true
 	default = simple
 [core]
 	editor = code -w
