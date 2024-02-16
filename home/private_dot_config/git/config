@@ -2,17 +2,14 @@
 	name = Samuel Dion-Girardeau
 	email = samuel.diongirardeau@gmail.com
 	signingkey = 5EE73F061FE9F625
-[init]
-	defaultBranch = main
-[push]
-	autosetupremote = true
-	default = simple
+[github]
+	user = samueldg
+[gpg]
+	program = gpg
 [core]
 	editor = code -w
 	excludesfile = ~/.config/git/ignore
 	pager = delta
-[color]
-	ui = true
 [alias]
 	alias-master-as-main = "!git symbolic-ref refs/heads/main refs/heads/master && git symbolic-ref refs/remotes/origin/main refs/remotes/origin/master"
 	aliases = config --get-regexp alias
@@ -27,16 +24,23 @@
 	poulpe = pull --all --tags --prune
 	pushup = "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
 	summary = log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
-[pull]
-	rebase = true
-[rebase]
-	autoStash = true
-[blame]
-	# ignoreRevsFile = .git-blame-ignore-revs
+[advice]
+	addEmptyPathspec = false
+[help]
+	autoCorrect = prompt
+[init]
+	defaultBranch = main
 [commit]
 	gpgsign = true
-[gpg]
-	program = gpg
+[rebase]
+	autoStash = true
+[pull]
+	rebase = true
+[push]
+	autosetupremote = true
+	default = simple
+[blame]
+	# ignoreRevsFile = .git-blame-ignore-revs
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -44,6 +48,8 @@
 	required = true
 [interactive]
 	diffFilter = delta --color-only
+[color]
+	ui = true
 [diff]
 	colorMoved = default
 [delta]
@@ -56,9 +62,3 @@
 	commit-decoration-style = bold yellow box ul
 	file-style = bold yellow ul
 	file-decoration-style = none
-[github]
-	user = samueldg
-[advice]
-	addEmptyPathspec = false
-[help]
-	autoCorrect = prompt
