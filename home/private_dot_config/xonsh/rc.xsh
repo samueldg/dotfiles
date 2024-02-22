@@ -37,7 +37,7 @@ def _fuck(args, stdin=None):
 def _upall(args, stdin=None):
     if $(command -v chezmoi):
         rich -p "Updating chezmoi" --panel 'rounded' --panel-style 'green'
-        chezmoi update
+        chezmoi update -v
     if $(command -v brew):
         rich -p "Updating brew" --panel 'rounded' --panel-style 'green'
         brew update
