@@ -8,13 +8,9 @@ warnings.filterwarnings(
     module='prompt_toolkit',
 )
 
-source-bash ~/.bash_profile
+source-bash ~/.bash_profile --overwrite-alias
 
 xontrib load vox
-
-# Disable alias warning:
-#    Skipping application of 'foo' alias from 'bash' [...]
-$FOREIGN_ALIASES_SUPPRESS_SKIP_MESSAGE = True
 
 # Customize multiline prompt appearance
 $MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
