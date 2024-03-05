@@ -18,6 +18,7 @@ brew_formulae="\
     just \
     kubernetes-cli \
     kustomize \
+    lsd \
     pinentry-mac \
     pipx \
     pyenv \
