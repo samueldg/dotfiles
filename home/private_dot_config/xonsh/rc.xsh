@@ -72,6 +72,5 @@ aliases['openbb'] = _openbb
 aliases['cw'] = _cw
 
 
-if $(command -v oh-my-posh):
-    $OH_MY_POSH_HOME = $(brew --prefix oh-my-posh).strip()
-    execx($(oh-my-posh init xonsh --config "$OH_MY_POSH_HOME/themes/slimfat.omp.json"))
+if $(command -v starship):
+    execx($(starship init xonsh))

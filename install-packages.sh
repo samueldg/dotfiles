@@ -25,6 +25,7 @@ brew_formulae="\
     pyenv-virtualenv \
     python-yq \
     ripgrep \
+    starship \
     tldr \
     tree \
     wget \
