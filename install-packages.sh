@@ -23,7 +23,6 @@ brew_formulae="\
     pipx \
     pyenv \
     pyenv-virtualenv \
-    python-yq \
     ripgrep \
     starship \
     tldr \
@@ -51,6 +50,7 @@ pipx_packages="\
     ruff \
     snakeviz \
     xonsh[full] \
+    yq \
 "
 
 brew install $brew_formulae
