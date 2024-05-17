@@ -9,6 +9,7 @@ brew_formulae="\
     docker \
     docker-buildx \
     docker-compose \
+    font-hack-nerd-font \
     gh \
     git \
     git-delta \
