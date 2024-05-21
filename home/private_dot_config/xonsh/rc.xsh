@@ -59,13 +59,16 @@ def _cw(args, stdin=None):
         code @(gf`{directory}/*.code-workspace`[0])
     else:
         code @(directory)
+
+
+def _llmd(args):
+    llm @(args) | rich --markdown --text-left --width 100 -
     
-
-
 aliases['fuck'] = _fuck
 aliases['upall'] = _upall
 aliases['openbb'] = _openbb
 aliases['cw'] = _cw
+aliases['llmd'] = _llmd
 
 
 if $(command -v starship):
