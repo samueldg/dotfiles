@@ -26,10 +26,12 @@ $XONSH_TRACEBACK_LOGFILE = None
 $XONSH_SHOW_TRACEBACK = False
 
 
+@aliases.register("fuck")
 def _fuck(args, stdin=None):
     sudo @$(history show -1)
 
 
+@aliases.register("upall")
 def _upall(args, stdin=None):
     if $(command -v chezmoi):
         rich -p "Updating chezmoi" --panel 'rounded' --panel-style 'green'
@@ -46,12 +48,14 @@ def _upall(args, stdin=None):
         pipx upgrade-all
 
 
+@aliases.register("openbb")
 def _openbb(args, stdin=None):
     # Can't call it directly because of the space in the path:
     # https://github.com/xonsh/xonsh/issues/4481
     $["/Applications/OpenBB Terminal/OpenBB Terminal"]
 
 
+@aliases.register("cw")
 def _cw(args, stdin=None):
     directory = args[0] if args else "."
 
@@ -61,14 +65,9 @@ def _cw(args, stdin=None):
         code @(directory)
 
 
+@aliases.register("llmd")
 def _llmd(args):
     llm @(args) | rich --markdown --text-left --width 100 -
-    
-aliases['fuck'] = _fuck
-aliases['upall'] = _upall
-aliases['openbb'] = _openbb
-aliases['cw'] = _cw
-aliases['llmd'] = _llmd
 
 
 if $(command -v starship):
