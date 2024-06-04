@@ -3,6 +3,7 @@
 set -euo pipefail
 
 brew_formulae="\
+    1password-cli \
     bat \
     chezmoi \
     curl \
