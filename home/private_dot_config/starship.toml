@@ -5,5 +5,16 @@ truncate_to_repo = false
 [gcloud]
 disabled = true
 
+[kubernetes]
+disabled = false
+detect_env_vars = [
+    "STARSHIP_ENABLE_MODULE_KUBERNETES",
+]
+# Workaround for https://github.com/starship/starship/issues/5978
+# Only having the env var check doesn't work.
+detect_files = [
+    'THIS_FILE_WILL_NEVER_EXIST'
+]
+
 [package]
 disabled = true
