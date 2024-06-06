@@ -16,9 +16,9 @@ detect_files = [
     'THIS_FILE_WILL_NEVER_EXIST'
 ]
 contexts = [
-    { context_pattern = "[^-]+-devops.*", context_alias = "devops", style = "blue" },
-    { context_pattern = "[^-]+-staging.*", context_alias = "staging", style = "yellow" },
-    { context_pattern = "[^-]+-prod.*", context_alias = "prod", style = "red" },
+    { context_pattern = "[^-]+-devops.*", context_alias = "devops", style = "blue bold" },
+    { context_pattern = "[^-]+-staging.*", context_alias = "staging", style = "yellow bold" },
+    { context_pattern = "[^-]+-prod.*", context_alias = "prod", style = "red bold" },
 ]
 
 [package]
