@@ -10,11 +10,6 @@ disabled = false
 detect_env_vars = [
     "STARSHIP_ENABLE_MODULE_KUBERNETES",
 ]
-# Workaround for https://github.com/starship/starship/issues/5978
-# Only having the env var check doesn't work.
-detect_files = [
-    'THIS_FILE_WILL_NEVER_EXIST'
-]
 contexts = [
     { context_pattern = "[^-]+-devops.*", context_alias = "devops", style = "blue bold" },
     { context_pattern = "[^-]+-staging.*", context_alias = "staging", style = "yellow bold" },
