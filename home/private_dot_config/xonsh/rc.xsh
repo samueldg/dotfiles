@@ -46,6 +46,10 @@ def _upall(args, stdin=None):
     if $(command -v pipx):
         rich -p "Updating pipx" --panel 'rounded' --panel-style 'green'
         pipx upgrade-all
+        gcloud components update --quiet
+    if $(command -v uv):
+        rich -p "Updating uv" --panel 'rounded' --panel-style 'green'
+        uv self update
 
 
 @aliases.register("openbb")
