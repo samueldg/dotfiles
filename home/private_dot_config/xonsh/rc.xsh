@@ -50,6 +50,7 @@ def _upall(args, stdin=None):
     if $(command -v uv):
         rich -p "Updating uv" --panel 'rounded' --panel-style 'green'
         uv self update
+        uv tool upgrade --all
 
 
 @aliases.register("openbb")
