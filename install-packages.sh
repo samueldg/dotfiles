@@ -2,6 +2,16 @@
 
 set -euo pipefail
 
+# Install Homebrew
+if [ ! "$(command -v brew)" ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Install uv
+if [ ! "$(command -v uv)" ]; then
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+fi
+
 brew_formulae="\
     1password-cli \
     bat \
