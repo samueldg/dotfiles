@@ -32,8 +32,6 @@ brew_formulae="\
     kustomize \
     lsd \
     pinentry-mac \
-    pyenv \
-    pyenv-virtualenv \
     ripgrep \
     starship \
     tldr \
