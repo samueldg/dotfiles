@@ -43,10 +43,6 @@ def _upall(args, stdin=None):
     if $(command -v gcloud):
         rich -p "Updating gcloud" --panel 'rounded' --panel-style 'green'
         gcloud components update --quiet
-    if $(command -v pipx):
-        rich -p "Updating pipx" --panel 'rounded' --panel-style 'green'
-        pipx upgrade-all
-        gcloud components update --quiet
     if $(command -v uv):
         rich -p "Updating uv" --panel 'rounded' --panel-style 'green'
         uv self update
