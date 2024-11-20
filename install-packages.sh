@@ -22,7 +22,6 @@ brew_formulae="\
     kustomize \
     lsd \
     pinentry-mac \
-    pipx \
     pyenv \
     pyenv-virtualenv \
     ripgrep \
@@ -39,7 +38,7 @@ brew_casks="\
     ngrok \
 "
 
-pipx_packages="\
+uv_packages="\
     asciinema \
     black \
     cookiecutter \
@@ -51,14 +50,15 @@ pipx_packages="\
     rich-cli \
     ruff \
     snakeviz \
-    xonsh[full] \
     yq \
 "
 
 brew install $brew_formulae
 brew install --cask $brew_casks
-pipx install $pipx_packages
 
 mkdir -p ~/.docker/cli-plugins
 ln -sfn /opt/homebrew/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 ln -sfn /opt/homebrew/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
+
+uv tool install xonsh[full] --with xontrib-vox
+echo "$uv_packages" | xargs -n 1 uv tool install
