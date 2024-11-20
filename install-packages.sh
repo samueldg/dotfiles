@@ -44,6 +44,7 @@ uv_packages="\
     cookiecutter \
     hatchling \
     pgcli \
+    pipx \
     poetry \
     pre-commit \
     python-lsp-server[all] \
