@@ -11,9 +11,9 @@ detect_env_vars = [
     "STARSHIP_ENABLE_MODULE_KUBERNETES",
 ]
 contexts = [
-    { context_pattern = "[^-]+-devops.*", context_alias = "devops", style = "blue bold" },
-    { context_pattern = "[^-]+-staging.*", context_alias = "staging", style = "yellow bold" },
-    { context_pattern = "[^-]+-prod.*", context_alias = "prod", style = "red bold" },
+    { context_pattern = ".*-devops.*", context_alias = "devops", style = "blue bold" },
+    { context_pattern = ".*-staging.*", context_alias = "staging", style = "yellow bold" },
+    { context_pattern = ".*-prod.*", context_alias = "prod", style = "red bold" },
 ]
 
 [package]
