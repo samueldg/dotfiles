@@ -47,6 +47,7 @@ brew_casks="\
 "
 
 uv_packages="\
+    aider-chat \
     asciinema \
     black \
     cookiecutter \
