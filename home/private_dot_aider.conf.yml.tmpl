@@ -1,0 +1,44 @@
+## Specify the model to use for the main chat
+model: sonnet
+
+## Use claude-3-5-sonnet-20241022 model for the main chat
+sonnet: true
+
+## Specify the OpenAI API key
+#openai-api-key: xxx
+
+## Specify the Anthropic API key
+anthropic-api-key: '{{ keepassxcAttribute "Anthropic" "API key" }}'
+
+## Timeout in seconds for API calls (default: None)
+timeout: 60
+
+## Use colors suitable for a dark terminal background (default: False)
+dark-mode: true
+
+
+## Show diffs when committing changes (default: False)
+show-diffs: true
+
+## Enable/disable adding .aider* to .gitignore (default: True)
+gitignore: false
+
+## Specify lint commands to run for different languages, eg: "python: flake8 --select=..." (can be used multiple times)
+#lint-cmd: xxx
+## Specify multiple values like this:
+#lint-cmd:
+#  - xxx
+#  - yyy
+#  - zzz
+lint-cmd:
+  - "python: ruff check ."
+  - "python: ruff format --check ."
+
+## Permanently disable analytics
+analytics-disable: true
+
+## Check for new aider versions on launch
+check-update: false
+
+## Specify which editor to use for the /editor command
+editor: code
