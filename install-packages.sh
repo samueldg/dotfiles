@@ -47,7 +47,6 @@ brew_casks="\
 "
 
 uv_packages="\
-    aider-chat \
     asciinema \
     black \
     cookiecutter \
@@ -71,4 +70,5 @@ ln -sfn /opt/homebrew/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/
 
 uv tool install xonsh[full] --with xontrib-vox
 uv tool install llm --with llm-anthropic
+uv tool install aider-chat --with playwright
 echo "$uv_packages" | xargs -n 1 uv tool install
