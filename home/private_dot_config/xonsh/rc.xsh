@@ -70,6 +70,9 @@ def _cw(args, stdin=None):
 def _llmd(args):
     llm @(args) | rich --markdown --text-left --width 100 -
 
+@aliases.register("rufff")
+def _rufff(args):
+    ruff check . && ruff format --check .
 
 if $(command -v starship):
     execx($(starship init xonsh))
