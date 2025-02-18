@@ -69,6 +69,6 @@ ln -sfn /opt/homebrew/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 ln -sfn /opt/homebrew/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
 
 uv tool install xonsh[full] --with xontrib-vox
-uv tool install llm --with llm-anthropic
+uv tool install llm --with llm-anthropic --with llm-mlx
 uv tool install aider-chat --with playwright
 echo "$uv_packages" | xargs -n 1 uv tool install
