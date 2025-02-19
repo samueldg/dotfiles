@@ -5,7 +5,11 @@
 [github]
 	user = samueldg
 [gpg]
+	{{ if eq .chezmoi.os "darwin" }}
+	program = /opt/homebrew/bin/gpg
+	{{ else  }}
 	program = gpg
+	{{ end }}
 [core]
 	editor = code -w
 	excludesfile = ~/.config/git/ignore
