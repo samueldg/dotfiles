@@ -54,6 +54,7 @@ uv_packages="\
     pgcli \
     poetry \
     pre-commit \
+    py-spy \
     python-lsp-server[all] \
     rich-cli \
     ruff \
