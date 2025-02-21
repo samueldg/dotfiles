@@ -44,6 +44,7 @@ brew_casks="\
     keepassxc \
     keepingyouawake \
     ngrok \
+    obsidian \
 "
 
 uv_packages="\
