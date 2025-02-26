@@ -52,6 +52,7 @@ uv_packages="\
     black \
     cookiecutter \
     hatchling \
+    mlx-whisper \
     pgcli \
     poetry \
     pre-commit \
