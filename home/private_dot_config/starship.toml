@@ -2,6 +2,9 @@
 truncation_length = 0
 truncate_to_repo = false
 
+[docker_context]
+disabled = true
+
 [gcloud]
 disabled = true
 
