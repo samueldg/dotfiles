@@ -33,6 +33,7 @@ brew_formulae="\
     lsd \
     pinentry-mac \
     ripgrep \
+    snowflake-cli \
     starship \
     tldr \
     tree \
