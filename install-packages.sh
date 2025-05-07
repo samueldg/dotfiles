@@ -61,6 +61,7 @@ uv_packages="\
     rich-cli \
     ruff \
     snakeviz \
+    ty \
     yq \
 "
 
