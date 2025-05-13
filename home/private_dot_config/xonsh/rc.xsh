@@ -1,12 +1,4 @@
-import warnings
 from xonsh.tools import chdir
-
-warnings.filterwarnings(
-    'ignore',
-    message='There is no current event loop',
-    category=DeprecationWarning,
-    module='prompt_toolkit',
-)
 
 source-bash ~/.bash_profile --overwrite-alias
 
