@@ -5,13 +5,13 @@ source-bash ~/.bash_profile --overwrite-alias
 xontrib load vox
 
 # Customize multiline prompt appearance
-$MULTILINE_PROMPT = '`·.,¸,.·*¯`·.,¸,.·*¯'
+$MULTILINE_PROMPT = "`·.,¸,.·*¯`·.,¸,.·*¯"
 
 # Custom prompt_toolkit style definitions
-$XONSH_STYLE_OVERRIDES['completion-menu'] = 'bg:#333333 #EEEEEE'
+$XONSH_STYLE_OVERRIDES["completion-menu"] = "bg:#333333 #EEEEEE"
 
 # Add Homebrew bash completions path
-$BASH_COMPLETIONS.insert(0, '/usr/local/etc/bash_completion.d')
+$BASH_COMPLETIONS.insert(0, "/usr/local/etc/bash_completion.d")
 
 # Python exception handling
 $XONSH_TRACEBACK_LOGFILE = None
@@ -26,17 +26,17 @@ def _fuck(args, stdin=None):
 @aliases.register("upall")
 def _upall(args, stdin=None):
     if $(command -v chezmoi):
-        rich -p "Updating chezmoi" --panel 'rounded' --panel-style 'green'
+        rich -p "Updating chezmoi" --panel "rounded" --panel-style "green"
         chezmoi update -v
     if $(command -v brew):
-        rich -p "Updating Homebrew" --panel 'rounded' --panel-style 'green'
+        rich -p "Updating Homebrew" --panel "rounded" --panel-style "green"
         brew update
         brew upgrade
     if $(command -v gcloud):
-        rich -p "Updating gcloud" --panel 'rounded' --panel-style 'green'
+        rich -p "Updating gcloud" --panel "rounded" --panel-style "green"
         gcloud components update --quiet
     if $(command -v uv):
-        rich -p "Updating uv" --panel 'rounded' --panel-style 'green'
+        rich -p "Updating uv" --panel "rounded" --panel-style "green"
         uv self update
         uv tool upgrade --all
 
