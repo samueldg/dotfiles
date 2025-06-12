@@ -50,18 +50,15 @@ brew_casks="\
 
 uv_tools="\
     asciinema \
-    black \
     cookiecutter \
     hatchling \
     marimo \
     pgcli \
     poetry \
     pre-commit \
-    py-spy \
     python-lsp-server[all] \
     rich-cli \
     ruff \
-    snakeviz \
     ty \
     yq \
 "
