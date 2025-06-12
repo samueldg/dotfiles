@@ -53,6 +53,7 @@ uv_tools="\
     black \
     cookiecutter \
     hatchling \
+    marimo \
     pgcli \
     poetry \
     pre-commit \
