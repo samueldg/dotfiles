@@ -39,6 +39,9 @@ def _upall(args, stdin=None):
         rich -p "Updating uv" --panel "rounded" --panel-style "green"
         uv self update
         uv tool upgrade --all
+    if $(command -v claude):
+        rich -p "Updating Claude Code" --panel "rounded" --panel-style "green"
+        claude update
 
 
 @aliases.register("openbb")
