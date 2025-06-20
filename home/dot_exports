@@ -22,3 +22,5 @@ export INSTALLER_NO_MODIFY_PATH=1
 
 # Workaround https://github.com/Textualize/rich-cli/issues/73
 export PYTHONWARNINGS="ignore:The parameter -j is used more than once:UserWarning:click.core:"
+
+export GH_NO_UPDATE_NOTIFIER="1"
