@@ -28,7 +28,7 @@
 	master2main = "!git branch -m master main && git fetch origin && git branch -u origin/main main && git remote set-head origin -a"
 	poulpe = pull --all --tags --prune
 	pushup = "!_CURRENT_BRANCH=$(git current-branch) && git push -u origin $_CURRENT_BRANCH"
-	rename = "!_CURRENT_BRANCH=$(git current-branch) && echo $_CURRENT_BRANCH > .git/BRANCH_EDITNAME && ${EDITOR:-vi} .git/BRANCH_EDITNAME && _NEW_BRANCH=$(cat .git/BRANCH_EDITNAME) && rm .git/BRANCH_EDITNAME && [ \"$_CURRENT_BRANCH\" != \"$_NEW_BRANCH\" ] && git branch -m $_CURRENT_BRANCH $_NEW_BRANCH || echo 'Branch name unchanged' >&2"
+	rename = "!_CURRENT_BRANCH=$(git current-branch) && echo $_CURRENT_BRANCH > .git/BRANCH_EDITNAME && $(git config get core.editor) .git/BRANCH_EDITNAME && _NEW_BRANCH=$(cat .git/BRANCH_EDITNAME) && rm .git/BRANCH_EDITNAME && [ \"$_CURRENT_BRANCH\" != \"$_NEW_BRANCH\" ] && git branch -m $_CURRENT_BRANCH $_NEW_BRANCH || echo 'Branch name unchanged' >&2"
 	summary = log --format=tformat:'* %s (%h)%+n%w(0,4,4)%-b%n'
 [advice]
 	addEmptyPathspec = false
