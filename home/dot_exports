@@ -21,3 +21,5 @@ export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config.rc"
 export INSTALLER_NO_MODIFY_PATH=1
 
 export GH_NO_UPDATE_NOTIFIER="1"
+
+export DISABLE_TELEMETRY="1"
