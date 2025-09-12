@@ -55,7 +55,7 @@ uv_tools="\
     marimo \
     pgcli \
     poetry \
-    pre-commit \
+    prek \
     python-lsp-server[all] \
     rich-cli \
     ruff \
