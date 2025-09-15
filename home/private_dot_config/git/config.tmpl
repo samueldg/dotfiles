@@ -20,7 +20,7 @@
 	aliases = config --get-regexp alias
 	amend = commit --amend
 	current-branch = git rev-parse --abbrev-ref HEAD
-	default-branch = "!git ls-remote --exit-code --heads origin main >/dev/null && echo main || echo master"
+	default-branch = "!git config get --local init.defaultbranch || (git ls-remote --exit-code --heads origin main >/dev/null && echo main || echo master)"
 	done = "!_CURRENT_BRANCH=$(git current-branch) _DEFAULT_BRANCH=$(git default-branch) && git switch $_DEFAULT_BRANCH && git poulpe && git branch -d $_CURRENT_BRANCH"
 	fixup = commit --amend --no-edit
 	git = !exec git
