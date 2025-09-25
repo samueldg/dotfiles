@@ -21,3 +21,8 @@ contexts = [
 
 [package]
 disabled = true
+
+[python]
+python_binary = [
+    ["uv", "run", "--no-python-downloads", "python"]
+]
