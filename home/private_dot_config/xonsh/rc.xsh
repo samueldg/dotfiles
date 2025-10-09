@@ -44,13 +44,6 @@ def _upall(args, stdin=None):
         claude update
 
 
-@aliases.register("openbb")
-def _openbb(args, stdin=None):
-    # Can't call it directly because of the space in the path:
-    # https://github.com/xonsh/xonsh/issues/4481
-    $["/Applications/OpenBB Terminal/OpenBB Terminal"]
-
-
 @aliases.register("cw")
 def _cw(args, stdin=None):
     directory = args[0] if args else "."
