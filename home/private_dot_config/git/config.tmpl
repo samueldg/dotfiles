@@ -10,7 +10,7 @@
 	allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
 [core]
 	editor = cursor -w
-	excludesfile = ~/.config/git/ignore
+	excludesfile = {{ .chezmoi.homeDir }}/.config/git/ignore
 	pager = delta
 	quotepath = off
 [alias]
