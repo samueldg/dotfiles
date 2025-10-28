@@ -25,21 +25,21 @@ def _fuck(args, stdin=None):
 
 @aliases.register("upall")
 def _upall(args, stdin=None):
-    if $(command -v chezmoi):
+    if $(which chezmoi):
         rich -p "Updating chezmoi" --panel "rounded" --panel-style "green"
         chezmoi update -v
-    if $(command -v brew):
+    if $(which brew):
         rich -p "Updating Homebrew" --panel "rounded" --panel-style "green"
         brew update
         brew upgrade
-    if $(command -v gcloud):
+    if $(which gcloud):
         rich -p "Updating gcloud" --panel "rounded" --panel-style "green"
         gcloud components update --quiet
-    if $(command -v uv):
+    if $(which uv):
         rich -p "Updating uv" --panel "rounded" --panel-style "green"
         uv self update
         uv tool upgrade --all
-    if $(command -v claude):
+    if $(which claude):
         rich -p "Updating Claude Code" --panel "rounded" --panel-style "green"
         claude update
 
@@ -69,5 +69,5 @@ def _llmd(args):
 def _rufff(args):
     ruff check . && ruff format --check .
 
-if $(command -v starship):
+if $(which starship):
     execx($(starship init xonsh))

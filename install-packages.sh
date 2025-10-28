@@ -3,12 +3,12 @@
 set -euo pipefail
 
 # Install Homebrew
-if [ ! "$(command -v brew)" ]; then
+if [ ! "$(which brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Install uv
-if [ ! "$(command -v uv)" ]; then
+if [ ! "$(which uv)" ]; then
     curl -LsSf https://astral.sh/uv/install.sh | sh
 fi
 
