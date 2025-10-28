@@ -1,4 +1,9 @@
+import os
+import tempfile
+from contextlib import contextmanager
+
 from xonsh.tools import chdir
+from pathlib import Path
 
 source-bash ~/.bash_profile --overwrite-alias
 
@@ -16,6 +21,18 @@ $BASH_COMPLETIONS.insert(0, "/usr/local/etc/bash_completion.d")
 # Python exception handling
 $XONSH_TRACEBACK_LOGFILE = None
 $XONSH_SHOW_TRACEBACK = False
+
+SCRIPTS_DIR = Path("~/dev/scripts").expanduser()
+
+
+
+@contextmanager
+def temp_fifo():
+    """Create a temporary FIFO that auto-cleans on exit"""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        fifo_path = os.path.join(tmpdir, 'myfifo')
+        os.mkfifo(fifo_path)
+        yield fifo_path
 
 
 @aliases.register("fuck")
@@ -56,7 +73,9 @@ def _cw(args, stdin=None):
 
 @aliases.register("llmd")
 def _llmd(args):
-    llm @(args) | rich --markdown --text-left --width 100 -
+    with temp_fifo() as fifo:
+        uv run f"{SCRIPTS_DIR}/md_stream_textual.py" f"{fifo}" &
+        llm @(args) > f"{fifo}"
 
 @aliases.register("rufff")
 def _rufff(args):
