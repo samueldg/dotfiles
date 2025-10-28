@@ -5,11 +5,6 @@
 [github]
 	user = samueldg
 [gpg]
-	{{ if eq .chezmoi.os "darwin" }}
-	program = /opt/homebrew/bin/gpg
-	{{ else  }}
-	program = gpg
-	{{ end }}
 	format = ssh
 [gpg "ssh"]
 	allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
