@@ -1,50 +1,50 @@
 {
-    "cleanupPeriodDays": 90,
-    "env": {
-      "DISABLE_TELEMETRY": "1",
-      "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
-    },
-    "includeCoAuthoredBy": false,
-    "permissions": {
-      "allow": [
-        "LS",
-        "Read",
-        "Write",
-        "Edit",
-        "MultiEdit",
-        "Glob",
-        "Grep",
-        "NotebookRead",
-        "NotebookEdit",
-        "Task",
-        "TodoWrite",
-        "WebFetch(domain:*)",
-        "WebSearch",
-        "Bash(cd:*)",
-        "Bash(git:*)",
-        "Bash(gh:*)",
-        "Bash(ls:*)"
-      ],
-      "deny": [
-        "Bash(git push:main)",
-        "Bash(git push:master)",
-        "Bash(git add -A:*)",
-        "Bash(git add:.:*)"
-      ],
-    },
-    "model": "claude-sonnet-4-5-20250929",
-    "enableAllProjectMcpServers": false,
-    "alwaysThinkingEnabled": true,
-    "hooks": {
-      "Notification": [
-        {
-          "hooks": [
-            {
-              "type": "command",
-              "command": "osascript -e 'display notification \"Claude Code awaiting your input\"'"
-            }
-          ]
-        }
-      ]
-    }
+  "cleanupPeriodDays": 90,
+  "env": {
+    "DISABLE_TELEMETRY": "1",
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "0"
+  },
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "LS",
+      "Read",
+      "Write",
+      "Edit",
+      "MultiEdit",
+      "Glob",
+      "Grep",
+      "NotebookRead",
+      "NotebookEdit",
+      "Task",
+      "TodoWrite",
+      "WebFetch(domain:*)",
+      "WebSearch",
+      "Bash(cd:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(ls:*)"
+    ],
+    "deny": [
+      "Bash(git push:main)",
+      "Bash(git push:master)",
+      "Bash(git add -A:*)",
+      "Bash(git add:.:*)"
+    ]
+  },
+  "model": "claude-sonnet-4-5-20250929",
+  "enableAllProjectMcpServers": false,
+  "alwaysThinkingEnabled": true,
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude Code awaiting your input\"'"
+          }
+        ]
+      }
+    ]
   }
+}
