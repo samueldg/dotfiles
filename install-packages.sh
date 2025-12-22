@@ -50,6 +50,7 @@ brew_casks="\
 
 uv_tools="\
     asciinema \
+    batrachian-toad \
     cookiecutter \
     hatchling \
     marimo \
