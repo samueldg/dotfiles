@@ -51,6 +51,7 @@
   },
   "enabledPlugins": {
     "example-skills@anthropic-agent-skills": true,
+    "five-whys@delphia-plugins": true,
     "standalone-python-scripting@delphia-plugins": true
   },
   "alwaysThinkingEnabled": true
