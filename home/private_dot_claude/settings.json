@@ -23,7 +23,9 @@
       "Bash(cd:*)",
       "Bash(git:*)",
       "Bash(gh:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "MCP(context7:*)",
+      "MCP(linear-server:*)"
     ],
     "deny": [
       "Bash(git push:main)",
