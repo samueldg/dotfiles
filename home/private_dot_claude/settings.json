@@ -53,7 +53,8 @@
     "decision-memo@delphia-plugins": true,
     "five-whys@delphia-plugins": true,
     "standalone-python-scripting@delphia-plugins": true,
-    "code-review@claude-plugins-official": true
+    "code-review@claude-plugins-official": true,
+    "notion-reader@delphia-plugins": true
   },
   "alwaysThinkingEnabled": true
 }
