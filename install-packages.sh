@@ -36,7 +36,6 @@ brew_formulae="\
     ripgrep \
     snowflake-cli \
     starship \
-    tldr \
     tree \
     wget \
 "
