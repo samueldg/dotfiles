@@ -29,12 +29,7 @@
       "mcp__context7__resolve-library-id",
       "mcp__context7__query-docs"
     ],
-    "deny": [
-      "Bash(git push:main)",
-      "Bash(git push:master)",
-      "Bash(git add -A:*)",
-      "Bash(git add:.:*)"
-    ]
+    "deny": ["Bash(git push:main)", "Bash(git push:master)"]
   },
   "enableAllProjectMcpServers": false,
   "hooks": {},
