@@ -29,7 +29,10 @@
       "mcp__context7__resolve-library-id",
       "mcp__context7__query-docs"
     ],
-    "deny": ["Bash(git push:main)", "Bash(git push:master)"]
+    "deny": [
+      "Bash(git push:main)",
+      "Bash(git push:master)"
+    ]
   },
   "enableAllProjectMcpServers": false,
   "hooks": {},
@@ -40,7 +43,6 @@
     "code-review@claude-plugins-official": true,
     "notion-reader@delphia-plugins": true
   },
-  "alwaysThinkingEnabled": true,
   "extraKnownMarketplaces": {
     "obsidian-skills": {
       "source": {
@@ -48,5 +50,7 @@
         "repo": "kepano/obsidian-skills"
       }
     }
-  }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high"
 }

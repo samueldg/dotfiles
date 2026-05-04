@@ -71,6 +71,16 @@ def _cw(args, stdin=None):
         cursor @(directory)
 
 
+@aliases.register("z")
+def _z(args, stdin=None):
+    directory = args[0] if args else "."
+
+    if gf`{directory}/*.code-workspace`:
+        zed @(gf`{directory}/*.code-workspace`[0])
+    else:
+        zed @(directory)
+
+
 @aliases.register("llmd")
 def _llmd(args):
     with temp_fifo() as fifo:
