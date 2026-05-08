@@ -14,6 +14,7 @@
 *.Rproj
 *.vscode
 *.code-workspace
+.zed
 .aider*
 
 # Personal
