@@ -70,6 +70,14 @@ def _cw(args, stdin=None):
     else:
         cursor @(directory)
 
+@aliases.register("z")
+def _zw(args, stdin=None):
+    directory = args[0] if args else "."
+
+    if gf`{directory}/.zed/settings.json`:
+        zed -n f"{directory}"
+    else:
+        zed f"{directory}"
 
 @aliases.register("llmd")
 def _llmd(args):
