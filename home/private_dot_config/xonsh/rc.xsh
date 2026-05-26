@@ -59,6 +59,9 @@ def _upall(args, stdin=None):
     if $(which claude):
         rich -p "Updating Claude Code" --panel "rounded" --panel-style "green"
         claude update
+    if $(which codex):
+        rich -p "Updating Codex CLI" --panel "rounded" --panel-style "green"
+        codex update
 
 
 @aliases.register("cw")
