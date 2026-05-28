@@ -62,7 +62,8 @@ def _upall(args, stdin=None):
     if $(which codex):
         rich -p "Updating Codex CLI" --panel "rounded" --panel-style "green"
         # codex update prompts only when stdin is a TTY; detach it to run non-interactively
-        codex update < /dev/null
+        with @.env.swap(CODEX_NON_INTERACTIVE="1"):
+            codex update < /dev/null
 
 
 @aliases.register("cw")
