@@ -9,7 +9,7 @@
 [gpg "ssh"]
 	allowedSignersFile = {{ .chezmoi.homeDir }}/.ssh/allowed_signers
 [core]
-	editor = cursor -w
+	editor = code -w
 	excludesfile = {{ .chezmoi.homeDir }}/.config/git/ignore
 	pager = delta
 	quotepath = off

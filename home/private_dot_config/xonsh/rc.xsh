@@ -71,9 +71,9 @@ def _cw(args, stdin=None):
     directory = args[0] if args else "."
 
     if gf`{directory}/*.code-workspace`:
-        cursor @(gf`{directory}/*.code-workspace`[0])
+        code @(gf`{directory}/*.code-workspace`[0])
     else:
-        cursor @(directory)
+        code @(directory)
 
 @aliases.register("z")
 def _zw(args, stdin=None):
