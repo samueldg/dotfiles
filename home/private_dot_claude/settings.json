@@ -41,7 +41,8 @@
     "five-whys@delphia-plugins": true,
     "standalone-python-scripting@delphia-plugins": true,
     "code-review@claude-plugins-official": true,
-    "notion-reader@delphia-plugins": true
+    "notion-reader@delphia-plugins": true,
+    "slack@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
