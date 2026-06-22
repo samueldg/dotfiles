@@ -42,7 +42,9 @@
     "standalone-python-scripting@delphia-plugins": true,
     "code-review@claude-plugins-official": true,
     "notion-reader@delphia-plugins": true,
-    "slack@claude-plugins-official": true
+    "slack@claude-plugins-official": true,
+    "unslop@delphia-plugins": true,
+    "contribute-skill@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
@@ -54,7 +56,7 @@
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
+  "awaySummaryEnabled": false,
   "tui": "fullscreen",
-  "skipAutoPermissionPrompt": true,
-  "awaySummaryEnabled": false
+  "skipAutoPermissionPrompt": true
 }
