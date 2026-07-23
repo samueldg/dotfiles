@@ -52,10 +52,8 @@ uv_tools="\
     asciinema \
     batrachian-toad \
     cookiecutter \
-    hatchling \
     marimo \
     pgcli \
-    poetry \
     prek \
     python-lsp-server[all] \
     rich-cli \
