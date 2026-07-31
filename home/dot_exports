@@ -13,7 +13,8 @@ export GPG_TTY="tty"
 
 export DOCKER_SCAN_SUGGEST="false"
 
-export CLOUDSDK_PYTHON="$HOME/.pyenv/versions/3.10.13/bin/python"
+# uv-managed interpreter; this shim path is stable across `uv python upgrade`.
+export CLOUDSDK_PYTHON="$HOME/.local/bin/python3.14"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 export RIPGREP_CONFIG_PATH="$HOME/.config/ripgrep/config.rc"
