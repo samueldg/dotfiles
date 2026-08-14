@@ -27,7 +27,6 @@ brew_formulae="\
     git-lfs \
     gnu-sed \
     gnupg \
-    jj \
     just \
     kubernetes-cli \
     kustomize \
