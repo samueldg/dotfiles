@@ -45,7 +45,9 @@
     "notion-reader@delphia-plugins": true,
     "slack@claude-plugins-official": true,
     "unslop@delphia-plugins": true,
-    "contribute-skill@delphia-plugins": true
+    "contribute-skill@delphia-plugins": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
