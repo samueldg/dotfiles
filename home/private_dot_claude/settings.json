@@ -7,7 +7,6 @@
   },
   "includeCoAuthoredBy": true,
   "permissions": {
-    "defaultMode": "auto",
     "allow": [
       "LS",
       "Read",
@@ -33,7 +32,8 @@
     "deny": [
       "Bash(git push:main)",
       "Bash(git push:master)"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "enableAllProjectMcpServers": false,
   "hooks": {},
