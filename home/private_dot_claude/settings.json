@@ -47,7 +47,10 @@
     "unslop@delphia-plugins": true,
     "contribute-skill@delphia-plugins": true,
     "typescript-lsp@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true
+    "claude-md-management@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "ty-lsp@delphia-plugins": true,
+    "review-it-like-samueldg@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
