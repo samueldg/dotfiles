@@ -65,5 +65,9 @@
   "awaySummaryEnabled": false,
   "tui": "fullscreen",
   "skipAutoPermissionPrompt": true,
-  "skipWorkflowUsageWarning": true
+  "skipWorkflowUsageWarning": true,
+  "statusLine": {
+    "type": "command",
+    "command": "starship statusline claude-code"
+  }
 }
