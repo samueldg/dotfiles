@@ -37,6 +37,10 @@
   },
   "enableAllProjectMcpServers": false,
   "hooks": {},
+  "statusLine": {
+    "type": "command",
+    "command": "starship statusline claude-code"
+  },
   "enabledPlugins": {
     "decision-memo@delphia-plugins": true,
     "five-whys@delphia-plugins": true,
@@ -64,10 +68,6 @@
   "effortLevel": "high",
   "awaySummaryEnabled": false,
   "tui": "fullscreen",
-  "skipAutoPermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
-  "statusLine": {
-    "type": "command",
-    "command": "starship statusline claude-code"
-  }
+  "skipAutoPermissionPrompt": true
 }
