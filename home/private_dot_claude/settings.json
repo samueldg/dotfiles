@@ -1,9 +1,9 @@
 {
   "cleanupPeriodDays": 90,
   "env": {
-    "DISABLE_TELEMETRY": "1",
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "DISABLE_TELEMETRY": "1"
   },
   "includeCoAuthoredBy": true,
   "permissions": {
@@ -36,25 +36,127 @@
     "defaultMode": "auto"
   },
   "enableAllProjectMcpServers": false,
-  "hooks": {},
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/samuel/.config/iterm2/cc-status"
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "starship statusline claude-code"
   },
   "enabledPlugins": {
+    "claude-md-management@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "contribute-skill@delphia-plugins": true,
     "decision-memo@delphia-plugins": true,
     "five-whys@delphia-plugins": true,
-    "standalone-python-scripting@delphia-plugins": true,
-    "code-review@claude-plugins-official": true,
     "notion-reader@delphia-plugins": true,
-    "slack@claude-plugins-official": true,
-    "unslop@delphia-plugins": true,
-    "contribute-skill@delphia-plugins": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
+    "review-it-like-samueldg@delphia-plugins": true,
+    "slack@claude-plugins-official": true,
+    "standalone-python-scripting@delphia-plugins": true,
     "ty-lsp@delphia-plugins": true,
-    "review-it-like-samueldg@delphia-plugins": true
+    "typescript-lsp@claude-plugins-official": true,
+    "unslop@delphia-plugins": true,
+    "repo-map@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
@@ -69,5 +171,12 @@
   "awaySummaryEnabled": false,
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "pluginConfigs": {
+    "repo-map@delphia-plugins": {
+      "options": {
+        "repos_root": "~/dev/tilt"
+      }
+    }
+  }
 }
