@@ -145,18 +145,10 @@
   "enabledPlugins": {
     "claude-md-management@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
-    "contribute-skill@delphia-plugins": true,
-    "decision-memo@delphia-plugins": true,
-    "five-whys@delphia-plugins": true,
-    "notion-reader@delphia-plugins": true,
     "pyright-lsp@claude-plugins-official": true,
-    "review-it-like-samueldg@delphia-plugins": true,
     "slack@claude-plugins-official": true,
-    "standalone-python-scripting@delphia-plugins": true,
-    "ty-lsp@delphia-plugins": true,
     "typescript-lsp@claude-plugins-official": true,
-    "unslop@delphia-plugins": true,
-    "repo-map@delphia-plugins": true
+    "ty-lsp@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
@@ -164,19 +156,19 @@
         "source": "github",
         "repo": "kepano/obsidian-skills"
       }
+    },
+    "delphia-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "Delphia/agent-plugins"
+      }
     }
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "awaySummaryEnabled": false,
+  "pluginConfigs": {},
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
-  "skipAutoPermissionPrompt": true,
-  "pluginConfigs": {
-    "repo-map@delphia-plugins": {
-      "options": {
-        "repos_root": "~/dev/tilt"
-      }
-    }
-  }
+  "skipAutoPermissionPrompt": true
 }
