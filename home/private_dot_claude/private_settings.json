@@ -143,11 +143,11 @@
     "command": "starship statusline claude-code"
   },
   "enabledPlugins": {
-    "claude-md-management@claude-plugins-official": true,
-    "code-review@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": false,
+    "code-review@claude-plugins-official": false,
     "pyright-lsp@claude-plugins-official": true,
     "slack@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": false,
     "ty-lsp@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
@@ -171,5 +171,9 @@
   "theme": "auto",
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
-  "skipAutoPermissionPrompt": true
+  "skipAutoPermissionPrompt": true,
+  "skillOverrides": {
+    "jupyter-to-marimo": "off",
+    "marimo-notebook": "off"
+  }
 }
