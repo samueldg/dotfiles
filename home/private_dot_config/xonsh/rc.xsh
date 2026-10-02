@@ -56,6 +56,7 @@ def _upall(args, stdin=None):
         rich -p "Updating uv" --panel "rounded" --panel-style "green"
         uv self update
         uv tool upgrade --all
+        uv python upgrade
     if $(which claude):
         rich -p "Updating Claude Code" --panel "rounded" --panel-style "green"
         claude update
