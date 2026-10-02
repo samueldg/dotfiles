@@ -1,4 +1,8 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
+
+# Reruns on `chezmoi apply` whenever this script or the Brewfile changes
+# Brewfile hash: {{ include "../Brewfile" | sha256sum }}
 
 set -euo pipefail
 
@@ -6,7 +10,7 @@ set -euo pipefail
 if ! command -v brew >/dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     # Only affects this script's environment, not the shell profile
-    for brew_prefix in /opt/homebrew /usr/local /home/linuxbrew/.linuxbrew; do
+    for brew_prefix in /opt/homebrew /usr/local; do
         if [ -x "$brew_prefix/bin/brew" ]; then
             eval "$("$brew_prefix/bin/brew" shellenv)"
             break
@@ -22,4 +26,5 @@ fi
 
 uv python install 3.14
 
-brew bundle --file="$(dirname -- "${BASH_SOURCE[0]}")/Brewfile"
+brew bundle --file="{{ .chezmoi.workingTree }}/Brewfile"
+{{ end -}}
