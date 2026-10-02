@@ -29,12 +29,10 @@ brew_formulae="\
     git-delta \
     git-lfs \
     gnu-sed \
-    gnupg \
     just \
     kubernetes-cli \
     kustomize \
     lsd \
-    pinentry-mac \
     ripgrep \
     snowflake-cli \
     starship \
@@ -47,7 +45,6 @@ brew_casks="\
     font-hack-nerd-font \
     firefox \
     google-drive \
-    gpg-suite \
     iterm2 \
     keepassxc \
     keepingyouawake \
