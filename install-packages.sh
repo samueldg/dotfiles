@@ -65,8 +65,6 @@ brew_casks=(
 
 uv_tools=(
     asciinema
-    batrachian-toad
-    cookiecutter
     marimo
     pgcli
     prek
