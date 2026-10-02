@@ -5,11 +5,13 @@ set -euo pipefail
 # Install Homebrew
 if [ ! "$(which brew)" ]; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    PATH="/opt/homebrew/bin:$PATH"
 fi
 
 # Install uv
 if [ ! "$(which uv)" ]; then
     curl -LsSf https://astral.sh/uv/install.sh | sh
+    PATH="$HOME/.local/bin:$PATH"
 fi
 
 brew_formulae="\
