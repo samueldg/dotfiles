@@ -22,7 +22,6 @@ brew_formulae="\
     docker \
     docker-buildx \
     docker-compose \
-    font-hack-nerd-font \
     gh \
     git \
     git-delta \
@@ -42,6 +41,7 @@ brew_formulae="\
 "
 
 brew_casks="\
+    font-hack-nerd-font \
     gpg-suite \
     keepassxc \
     keepingyouawake \
