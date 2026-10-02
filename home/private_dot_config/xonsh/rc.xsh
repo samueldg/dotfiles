@@ -16,7 +16,7 @@ $MULTILINE_PROMPT = "`·.,¸,.·*¯`·.,¸,.·*¯"
 $XONSH_STYLE_OVERRIDES["completion-menu"] = "bg:#333333 #EEEEEE"
 
 # Add Homebrew bash completions path
-$BASH_COMPLETIONS.insert(0, "/usr/local/etc/bash_completion.d")
+$BASH_COMPLETIONS.insert(0, "/opt/homebrew/etc/bash_completion.d")
 
 # Python exception handling
 $XONSH_TRACEBACK_LOGFILE = None
