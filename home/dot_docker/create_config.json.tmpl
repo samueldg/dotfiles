@@ -1,0 +1,8 @@
+{{- $brewPrefix := "/opt/homebrew" -}}
+{{- if eq .chezmoi.os "linux" }}{{ $brewPrefix = "/home/linuxbrew/.linuxbrew" }}
+{{- else if eq .chezmoi.arch "amd64" }}{{ $brewPrefix = "/usr/local" }}{{ end -}}
+{
+  "cliPluginsExtraDirs": [
+    "{{ $brewPrefix }}/lib/docker/cli-plugins"
+  ]
+}
