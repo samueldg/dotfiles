@@ -21,6 +21,7 @@ brew "wget"
 
 if OS.mac?
   cask "1password-cli"
+  cask "codex"
   cask "discord"
   cask "firefox"
   cask "font-hack-nerd-font"
