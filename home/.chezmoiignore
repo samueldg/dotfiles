@@ -1,0 +1,6 @@
+{{ if ne .chezmoi.os "darwin" -}}
+# Homebrew and iTerm only exist on macOS
+.config/iterm2
+.docker/config.json
+.local/bin/curl
+{{ end -}}
