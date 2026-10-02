@@ -17,7 +17,6 @@ if [ ! "$(which uv)" ]; then
 fi
 
 brew_formulae="\
-    1password-cli \
     bat \
     chezmoi \
     curl \
@@ -41,6 +40,7 @@ brew_formulae="\
 "
 
 brew_casks="\
+    1password-cli \
     discord \
     font-hack-nerd-font \
     firefox \
