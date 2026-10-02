@@ -12,6 +12,8 @@ fi
 if [ ! "$(which uv)" ]; then
     curl -LsSf https://astral.sh/uv/install.sh | sh
     PATH="$HOME/.local/bin:$PATH"
+
+    uv python install 3.14
 fi
 
 brew_formulae="\
