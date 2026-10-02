@@ -41,12 +41,21 @@ brew_formulae="\
 "
 
 brew_casks="\
+    discord \
     font-hack-nerd-font \
+    firefox \
+    google-drive \
     gpg-suite \
+    iterm2 \
     keepassxc \
     keepingyouawake \
     ngrok \
     obsidian \
+    raycast \
+    rectangle \
+    slack \
+    spotify \
+    visual-studio-code
 "
 
 uv_tools="\
