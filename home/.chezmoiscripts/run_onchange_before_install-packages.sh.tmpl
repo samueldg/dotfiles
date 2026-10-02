@@ -6,6 +6,10 @@
 
 set -euo pipefail
 
+# Standalone installers (uv, Claude Code, Codex) target ~/.local/bin, which
+# dot_path already adds. Having it on PATH here also stops them editing profiles.
+PATH="$HOME/.local/bin:$PATH"
+
 # Install Homebrew
 if ! command -v brew >/dev/null; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -18,15 +22,17 @@ if ! command -v brew >/dev/null; then
     done
 fi
 
-# Install uv (without editing shell profiles; dot_path already covers ~/.local/bin)
+# Install uv (explicitly opting out of its profile edits)
 if ! command -v uv >/dev/null; then
     curl -LsSf https://astral.sh/uv/install.sh | env UV_NO_MODIFY_PATH=1 sh
-    PATH="$HOME/.local/bin:$PATH"
 fi
 
-# Install Claude Code via its native installer, which self-updates
+# Claude Code and Codex use their own installers, which support self-update
 if ! command -v claude >/dev/null; then
     curl -fsSL https://claude.ai/install.sh | bash
+fi
+if ! command -v codex >/dev/null; then
+    curl -fsSL https://chatgpt.com/codex/install.sh | sh
 fi
 
 uv python install 3.14
