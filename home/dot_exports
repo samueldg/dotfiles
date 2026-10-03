@@ -19,3 +19,6 @@ export INSTALLER_NO_MODIFY_PATH=1
 export GH_NO_UPDATE_NOTIFIER="1"
 
 export DISABLE_TELEMETRY="1"
+
+# Stops Terraform's "out of date" nag in repos pinned to an older version
+export CHECKPOINT_DISABLE="1"
