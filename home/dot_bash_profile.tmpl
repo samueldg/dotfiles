@@ -4,7 +4,7 @@ done;
 unset file;
 
 shopt -s histappend;
-{{- if eq .machine "work" }}
+{{- if .work }}
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.bash.inc" ]; then source "$HOME/google-cloud-sdk/path.bash.inc"; fi

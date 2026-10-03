@@ -8,7 +8,7 @@ export HISTIGNORE='# *'
 
 export HOMEBREW_NO_ENV_HINTS=1
 
-{{ if eq .machine "work" -}}
+{{ if .work -}}
 # uv-managed interpreter; this shim path is stable across `uv python upgrade`.
 export CLOUDSDK_PYTHON="$HOME/.local/bin/python3.14"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
