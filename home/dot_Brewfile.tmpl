@@ -1,0 +1,99 @@
+{{- /* Rendered per machine from the `work` and `headless` flags in
+       chezmoi.toml, to ~/.Brewfile, which `brew bundle --global` reads.
+       The install-packages script renders this file by name too. */ -}}
+# Every machine
+brew "bat"
+brew "chezmoi"
+brew "curl"
+brew "docker"
+brew "docker-buildx"
+brew "docker-compose"
+brew "gh"
+brew "git"
+brew "git-delta"
+brew "git-lfs"
+brew "gnu-sed"
+brew "imagemagick"
+brew "jq"
+brew "just"
+brew "lsd"
+brew "ripgrep"
+brew "starship"
+brew "tree"
+brew "vim"
+brew "wget"
+
+uv "asciinema"
+uv "llm", with: ["llm-anthropic", "llm-fragments-pypi"]
+uv "marimo"
+uv "pgcli"
+uv "prek"
+uv "python-lsp-server[all]"
+uv "rich-cli"
+uv "ruff"
+uv "twine"
+uv "ty"
+uv "xonsh[full]", with: ["xontrib-vox"]
+uv "yq"
+{{- if .work }}
+
+# Work
+brew "bun"
+brew "go"
+brew "kubernetes-cli"
+brew "kustomize"
+brew "libpq", link: true  # keg-only; linking puts psql on PATH
+brew "mkcert"
+brew "mutagen-io/mutagen/mutagen"
+brew "nss"  # certutil, which mkcert needs to trust its CA in Firefox
+brew "pngquant"  # friday-wins-slide image compression
+brew "snowflake-cli"
+brew "supabase/tap/supabase"
+brew "tfenv"
+brew "trivy"
+brew "vercel"
+brew "wireguard-tools"
+cask "terraform-linters/tap/tflint"
+
+# Native libraries for building Python packages from source
+brew "apache-arrow"
+brew "cmake"
+brew "gcc"
+brew "glib"
+brew "pkgconf"
+brew "zlib"
+
+uv "snowflake-labs-mcp"
+{{- end }}
+{{- if and (eq .chezmoi.os "darwin") (not .headless) }}
+
+# Desktop apps
+cask "1password-cli"
+cask "claude"
+cask "codex-app"
+cask "discord"
+cask "firefox"
+cask "font-hack-nerd-font"
+cask "google-chrome"
+cask "google-drive"
+cask "iterm2"
+cask "keepassxc"
+cask "keepingyouawake"
+cask "macwhisper"
+cask "ngrok"
+cask "obsidian"
+cask "raycast"
+cask "rectangle"
+cask "slack"
+cask "spotify"
+cask "visual-studio-code"
+cask "zoom"
+{{- if .work }}
+cask "elgato-stream-deck"
+cask "firefox@developer-edition"
+cask "insta360-link-controller"
+cask "lm-studio"
+{{- end }}
+
+uv "it2"  # iTerm2's Python API CLI
+{{- end }}

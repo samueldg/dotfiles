@@ -1,2 +1,20 @@
+{{- /* Asked once per machine at `chezmoi init`; the answers stay in this
+       machine's local chezmoi.toml, never in the repo. */ -}}
+{{- $work := promptBoolOnce . "work" "Work machine" -}}
+{{- $headless := promptBoolOnce . "headless" "Headless with no GUI apps (server or DevBox or Raspberry Pi)" -}}
+
+[data]
+work = {{ $work }}
+headless = {{ $headless }}
+
+{{/* chezmoi fails outright when the configured pager is missing, which it is
+     on a fresh machine until Homebrew has installed delta. */ -}}
+{{ if lookPath "delta" -}}
 [diff]
 pager = "delta"
+{{- end }}
+{{- if stat (joinPath .chezmoi.homeDir ".chezmoi.kdbx") }}
+
+[keepassxc]
+database = "~/.chezmoi.kdbx"
+{{- end }}

@@ -1,8 +1,9 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-# Reruns on `chezmoi apply` whenever this script or the Brewfile changes
-# Brewfile hash: {{ include "../Brewfile" | sha256sum }}
+# Reruns on `chezmoi apply` whenever this script or the rendered Brewfile
+# changes, so flipping a machine flag also triggers it.
+# Brewfile hash: {{ includeTemplate "dot_Brewfile.tmpl" . | sha256sum }}
 
 set -euo pipefail
 
@@ -37,5 +38,12 @@ fi
 
 uv python install 3.14
 
-brew bundle --file="{{ .chezmoi.workingTree }}/Brewfile"
+# This script runs before chezmoi writes ~/.Brewfile, so on a fresh machine
+# that file does not exist yet; install from the same rendering instead.
+brewfile="$(mktemp)"
+trap 'rm -f "$brewfile"' EXIT
+cat > "$brewfile" <<'BREWFILE'
+{{ includeTemplate "dot_Brewfile.tmpl" . }}
+BREWFILE
+brew bundle --file="$brewfile"
 {{ end -}}
