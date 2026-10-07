@@ -29,13 +29,14 @@
       "mcp__context7__resolve-library-id",
       "mcp__context7__query-docs"
     ],
-    "deny": [
-      "Bash(git push:main)",
-      "Bash(git push:master)"
-    ],
+    "deny": ["Bash(git push:main)", "Bash(git push:master)"],
     "defaultMode": "auto"
   },
   "enableAllProjectMcpServers": false,
+  "skillOverrides": {
+    "jupyter-to-marimo": "off",
+    "marimo-notebook": "off"
+  },
   "hooks": {
     "Notification": [
       {
@@ -148,7 +149,8 @@
     "pyright-lsp@claude-plugins-official": true,
     "slack@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": false,
-    "ty-lsp@delphia-plugins": true
+    "ty-lsp@delphia-plugins": true,
+    "worktree-mgmt@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
@@ -168,12 +170,8 @@
   "effortLevel": "high",
   "awaySummaryEnabled": false,
   "pluginConfigs": {},
-  "theme": "auto",
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
-  "skipAutoPermissionPrompt": true,
-  "skillOverrides": {
-    "jupyter-to-marimo": "off",
-    "marimo-notebook": "off"
-  }
+  "theme": "auto",
+  "skipAutoPermissionPrompt": true
 }
