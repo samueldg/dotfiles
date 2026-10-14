@@ -45,5 +45,7 @@ trap 'rm -f "$brewfile"' EXIT
 cat > "$brewfile" <<'BREWFILE'
 {{ includeTemplate "dot_Brewfile.tmpl" . }}
 BREWFILE
-brew bundle --file="$brewfile"
+# Install only: upgrading here would bypass HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS
+# and quit running apps whenever the Brewfile changes. upall does upgrades.
+brew bundle --no-upgrade --file="$brewfile"
 {{ end -}}
