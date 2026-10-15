@@ -11,6 +11,9 @@
 * Don't amend commits unless necessary, strongly advised or user-requested. I prefer smaller commits when they are atomic and individually working.
 * When creating a Git worktree, place it inside the current repo at `.worktrees/<name>` (e.g. `git worktree add -b my-branch --no-track .worktrees/my-branch origin/main`), NOT as a sibling at the parent level. Keeping it inside the project stays within the permission scope and avoids extra permission prompts. My global gitignore (`~/.config/git/ignore`) already lists `.worktrees/`, so these never show up as untracked files. Clean up with `git worktree remove .worktrees/<name>` when done.
 * When a change splits into dependent pieces that are each reviewable on their own, use `gh stack` and its skill to create chained pull requests.
+* When a PR completes only part of a Linear issue, keep the issue ID out of the branch name and PR title,
+  and link it in the description with a non-closing magic word: `Part of XYZ-123`.
+  A branch-name, title link, or `Fixes`/`Closes`, moves the issue to Done on merge.
 
 ## Writing style
 
