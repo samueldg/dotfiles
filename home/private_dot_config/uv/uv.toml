@@ -1,1 +1,5 @@
 python-preference = "only-managed"
+
+exclude-newer = "3 days"
+# certifi ships CA trust-root removals, which must land as soon as they are published.
+exclude-newer-package = { certifi = false }
