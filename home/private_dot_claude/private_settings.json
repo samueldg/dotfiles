@@ -154,7 +154,8 @@
     "typescript-lsp@claude-plugins-official": false,
     "ty-lsp@delphia-plugins": true,
     "worktree-mgmt@delphia-plugins": true,
-    "miro@claude-plugins-official": true
+    "miro@claude-plugins-official": true,
+    "unslop@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
