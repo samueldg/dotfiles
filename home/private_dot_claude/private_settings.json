@@ -155,7 +155,11 @@
     "ty-lsp@delphia-plugins": true,
     "worktree-mgmt@delphia-plugins": true,
     "miro@claude-plugins-official": true,
-    "unslop@delphia-plugins": true
+    "unslop@delphia-plugins": true,
+    "contribute-skill@delphia-plugins": true,
+    "decision-memo@delphia-plugins": true,
+    "repo-map@delphia-plugins": true,
+    "five-whys@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
@@ -174,7 +178,13 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "awaySummaryEnabled": false,
-  "pluginConfigs": {},
+  "pluginConfigs": {
+    "repo-map@delphia-plugins": {
+      "options": {
+        "repos_root": "~/dev/tilt"
+      }
+    }
+  },
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
   "theme": "auto",
