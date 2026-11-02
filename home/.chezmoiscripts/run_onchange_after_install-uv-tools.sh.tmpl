@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Reruns on `chezmoi apply` whenever this list changes.
+#
+# These stay out of the Brewfile: `brew bundle` installs uv tools with
+# UV_PYTHON forced to the newest Homebrew Python, which overrides uv.toml's
+# python-preference and breaks the tool when Homebrew later removes that Python.
+# Running after chezmoi writes uv.toml means a fresh machine gets uv's own
+# Pythons too.
+
+set -euo pipefail
+# Extras like `[all]` are brackets, not globs
+set -f
+
+PATH="$HOME/.local/bin:$PATH"
+
+tools=(
+    "asciinema"
+    "llm --with llm-anthropic --with llm-fragments-pypi"
+    "marimo"
+    "pgcli"
+    "prek"
+    "python-lsp-server[all]"
+    "rich-cli"
+    "ruff"
+    "twine"
+    "ty"
+    "xonsh[full] --with xontrib-vox"
+    "yq"
+{{- if .work }}
+    "snowflake-labs-mcp"
+{{- end }}
+{{- if and (eq .chezmoi.os "darwin") (not .headless) }}
+    "it2"  # iTerm2's Python API CLI
+{{- end }}
+)
+
+for tool in "${tools[@]}"; do
+    # Word splitting is intended: each entry is a package plus its options.
+    # shellcheck disable=SC2086
+    uv tool install $tool
+done

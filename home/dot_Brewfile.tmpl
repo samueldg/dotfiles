@@ -22,19 +22,6 @@ brew "starship"
 brew "tree"
 brew "vim"
 brew "wget"
-
-uv "asciinema"
-uv "llm", with: ["llm-anthropic", "llm-fragments-pypi"]
-uv "marimo"
-uv "pgcli"
-uv "prek"
-uv "python-lsp-server[all]"
-uv "rich-cli"
-uv "ruff"
-uv "twine"
-uv "ty"
-uv "xonsh[full]", with: ["xontrib-vox"]
-uv "yq"
 {{- if .work }}
 
 # Work
@@ -64,8 +51,6 @@ brew "gcc"
 brew "glib"
 brew "pkgconf"
 brew "zlib"
-
-uv "snowflake-labs-mcp"
 {{- end }}
 {{- if and (eq .chezmoi.os "darwin") (not .headless) }}
 
@@ -99,6 +84,4 @@ cask "yubico-authenticator"
 {{- else }}
 cask "steam"
 {{- end }}
-
-uv "it2"  # iTerm2's Python API CLI
 {{- end }}
