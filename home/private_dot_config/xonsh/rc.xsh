@@ -65,6 +65,9 @@ def _upall(args, stdin=None):
         # codex update prompts only when stdin is a TTY; detach it to run non-interactively
         with @.env.swap(CODEX_NON_INTERACTIVE="1"):
             codex update < /dev/null
+    if $(which bt):
+        rich -p "Updating Braintrust CLI" --panel "rounded" --panel-style "green"
+        bt update < /dev/null
 
 
 @aliases.register("cw")
