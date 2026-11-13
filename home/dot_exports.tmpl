@@ -15,7 +15,7 @@ export HOMEBREW_NO_UPGRADE_QUIT_CASKS=1
 
 {{ if .work -}}
 # uv-managed interpreter; this shim path is stable across `uv python upgrade`.
-export CLOUDSDK_PYTHON="$HOME/.local/bin/python3.14"
+export CLOUDSDK_PYTHON="$HOME/.local/share/gcloud-python/bin/python"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 {{ end -}}
