@@ -7,7 +7,7 @@
 
 set -euo pipefail
 
-# Standalone installers (uv, Claude Code, Codex, bt) target ~/.local/bin, which
+# Standalone installers (uv, Claude Code, Codex, bt, Amp) target ~/.local/bin, which
 # dot_path already adds. Having it on PATH here also stops them editing profiles.
 PATH="$HOME/.local/bin:$PATH"
 
@@ -39,6 +39,11 @@ fi
 # The Braintrust CLI has no Homebrew tap; its installer supports `bt update`
 if ! command -v bt >/dev/null; then
     curl -fsSL https://bt.dev/cli/install.sh | env BT_NO_MODIFY_PATH=1 bash
+fi
+# Homebrew's `amp` formula is an unrelated text editor; the Amp CLI ships its
+# own installer and supports `amp update`
+if ! command -v amp >/dev/null; then
+    curl -fsSL https://ampcode.com/install.sh | bash
 fi
 {{- end }}
 

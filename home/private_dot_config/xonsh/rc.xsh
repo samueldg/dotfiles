@@ -68,6 +68,9 @@ def _upall(args, stdin=None):
     if $(which bt):
         rich -p "Updating Braintrust CLI" --panel "rounded" --panel-style "green"
         bt update < /dev/null
+    if $(which amp):
+        rich -p "Updating Amp CLI" --panel "rounded" --panel-style "green"
+        amp update < /dev/null
 
 
 @aliases.register("cw")
