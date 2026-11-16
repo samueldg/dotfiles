@@ -14,8 +14,9 @@ export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 export HOMEBREW_NO_UPGRADE_QUIT_CASKS=1
 
 {{ if .work -}}
-# uv-managed interpreter; this shim path is stable across `uv python upgrade`.
+# uv venv with numpy for faster IAP tunnels; gcloud runs Python with -S, so the venv's packages need SITEPACKAGES.
 export CLOUDSDK_PYTHON="$HOME/.local/share/gcloud-python/bin/python"
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 {{ end -}}
