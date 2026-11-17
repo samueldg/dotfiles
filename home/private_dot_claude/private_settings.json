@@ -158,7 +158,8 @@
     "contribute-skill@delphia-plugins": true,
     "decision-memo@delphia-plugins": true,
     "repo-map@delphia-plugins": true,
-    "five-whys@delphia-plugins": true
+    "five-whys@delphia-plugins": true,
+    "changelog-review@delphia-plugins": true
   },
   "extraKnownMarketplaces": {
     "obsidian-skills": {
