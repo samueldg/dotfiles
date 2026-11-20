@@ -56,6 +56,15 @@
 	required = true
 [interactive]
 	diffFilter = delta --color-only
+# delta's TUI: stage, fold and navigate from delta-rendered output.
+# `delta --tui` on its own opens the status view.
+# --quit-if-one-screen prints output that fits and exits, like `less -F`.
+[pager]
+	diff = delta --tui --quit-if-one-screen
+	show = delta --tui --quit-if-one-screen
+	log = delta --tui --quit-if-one-screen
+[sequence]
+	editor = delta --tui sequence-editor
 [color]
 	ui = true
 [diff]
